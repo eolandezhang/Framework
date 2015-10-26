@@ -13,7 +13,7 @@ namespace Eolande.AspNet.IBll.Proxy
     public class UserManager : IUserManager
     {
 
-        public string Add(UserDomain userDomain)
+        public string Add(SysUserDomain userDomain)
         {
             throw new NotImplementedException();
         }
@@ -23,20 +23,21 @@ namespace Eolande.AspNet.IBll.Proxy
             throw new NotImplementedException();
         }
 
-        public IList<UserDomain> GetList(string queryString)
+        public IList<SysUserDomain> GetList(string queryString)
         {
-            throw new NotImplementedException();
+            return new RestClient().Post<List<SysUserDomain>>("user/GetList","");
         }
 
-        public void Modify(UserDomain userDomain)
+        public void Modify(SysUserDomain userDomain)
         {
             throw new NotImplementedException();
         }
 
         public string GetMessage()
         {
-            string baseAddress = ConfigurationManager.AppSettings["BaseAddress"].ToString();
-            var msg = new RestClient().Read(baseAddress, HttpMethod.Get, "user/GetMessage");
+            //string baseAddress = ConfigurationManager.AppSettings["BaseAddress"].ToString();
+            //var msg = new RestClient().Read(HttpMethod.Get, "user/GetMessage");
+            var msg = new RestClient().Get<string>("user/GetMessage");
             return msg;
 
         }

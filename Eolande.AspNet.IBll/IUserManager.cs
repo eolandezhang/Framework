@@ -5,10 +5,10 @@ namespace Eolande.AspNet.IBll
 {
     public interface IUserManager
     {
-        string Add(UserDomain userDomain);
+        string Add(SysUserDomain userDomain);
         void Delete(string id);
-        IList<UserDomain> GetList(string queryString);
-        void Modify(UserDomain userDomain);
+        IList<SysUserDomain> GetList(string queryString);
+        void Modify(SysUserDomain userDomain);
         string GetMessage();
     }
 }

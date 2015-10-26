@@ -1,0 +1,23 @@
+﻿<?xml version="1.0"  encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" assembly="Eolande.AspNet.Domain" namespace="Eolande.AspNet.Domain">
+  <class name="SysUserDomain" table="SysUser">
+    <id name="Id" column="Id"/>
+    <property name="LoginName" column="LoginName"  />
+    <property name="Password" column="Password"  />
+    <property name="Name" column="Name"  />
+    <property name="Email" column="Email"  />
+    <property name="CreatedBy" column="CreatedBy"  />
+    <property name="CreatedAt" column="CreatedAt"  />
+    <property name="ModifiedBy" column="ModifiedBy"  />
+    <property name="ModifiedAt" column="ModifiedAt"  />
+    <property name="DeletedBy" column="DeletedBy"  />
+    <property name="DeletedAt" column="DeletedAt"  />
+    <property name="IsDeleted" column="IsDeleted"  />
+    <property name="Status" column="Status"  />
+  </class>
+  <!--<sql-query name="MpsStorage">
+    <return class="QPP.MRP.MpsStorage.Domain.MpsStorageDomain">
+    </return>
+    <![CDATA[EXEC MpsStorage :from,:to,:itemno,:itemtype,:companyid,:custno,:user,:dept,:flag]]>
+  </sql-query>-->
+</hibernate-mapping>
