@@ -6,7 +6,8 @@ using Eolande.AspNet.Domain;
 using System.Reflection;
 using System.Net.Http;
 using System.Configuration;
-using Eolande.Core.WebApi;
+
+using Eolande.Client;
 
 namespace Eolande.AspNet.IBll.Proxy
 {
@@ -25,7 +26,7 @@ namespace Eolande.AspNet.IBll.Proxy
 
         public IList<SysUserDomain> GetList(string queryString)
         {
-            return new RestClient().Post<List<SysUserDomain>>("user/GetList","");
+            return new WebApiService(Helper.BaseAddress).Post<List<SysUserDomain>>("user/GetList", "");
         }
 
         public void Modify(SysUserDomain userDomain)
@@ -35,11 +36,9 @@ namespace Eolande.AspNet.IBll.Proxy
 
         public string GetMessage()
         {
-            //string baseAddress = ConfigurationManager.AppSettings["BaseAddress"].ToString();
-            //var msg = new RestClient().Read(HttpMethod.Get, "user/GetMessage");
-            var msg = new RestClient().Get<string>("user/GetMessage");
-            return msg;
-
+            return new WebApiService(Helper.BaseAddress).Get<string>("user/Message");
+            
         }
+
     }
 }

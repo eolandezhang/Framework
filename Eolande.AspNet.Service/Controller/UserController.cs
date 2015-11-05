@@ -5,32 +5,19 @@ using System.Linq;
 using System.Net.Http;
 using System.Web;
 using System.Web.Http;
-
+using Eolande.AspNet.Bll;
 namespace Eolande.AspNet.Service.Controller
 {
     public class UserController : ApiController
     {
-        IUserManager Manager;
+        IUserManager Manager = new UserManager();
 
 
         public UserController()
         {
-            Manager = GetInstance(new Utility().Types);
+            
         }
-        public IUserManager GetInstance(List<Type> types)
-        {
-            IUserManager Manager = null;
-            foreach (var t in types)
-            {
-                if (typeof(IUserManager).IsAssignableFrom(t))
-                {
-                    var x = t.Assembly.CreateInstance(t.FullName);
-                    Manager = t.Assembly.CreateInstance(t.FullName) as IBll.IUserManager;
-                }
-            }
-            return Manager;
-        }
-
+        
         [HttpGet()]
         //[ActionName("Get")]
         public string Get()
@@ -38,7 +25,7 @@ namespace Eolande.AspNet.Service.Controller
             return "Web Api";
         }
         [HttpGet]
-        //[ActionName("GetMessage")]
+        [ActionName("Message")]
         public string GetMessage()
         {
             return Manager.GetMessage();

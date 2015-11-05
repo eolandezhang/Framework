@@ -9,7 +9,7 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>Eolande.AspNet.IBll</RootNamespace>
     <AssemblyName>Eolande.AspNet.IBll</AssemblyName>
-    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <TargetFrameworkProfile />
   </PropertyGroup>
@@ -46,9 +46,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Eolande.AspNet.Domain\02_Eolande.AspNet.Domain.csproj">
+    <ProjectReference Include="..\Eolande.AspNet.Domain\03_Eolande.AspNet.Domain.csproj">
       <Project>{7a65f204-f0ec-46b7-89a7-b74e7110b97d}</Project>
-      <Name>02_Eolande.AspNet.Domain</Name>
+      <Name>03_Eolande.AspNet.Domain</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

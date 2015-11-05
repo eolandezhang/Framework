@@ -8,7 +8,7 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>Eolande.AspNet.UnitTest</RootNamespace>
     <AssemblyName>Eolande.AspNet.UnitTest</AssemblyName>
-    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{3AC096D0-A1C2-E12C-1390-A8335801FDAB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
@@ -67,25 +67,25 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Eolande.AspNet.Bll\04_Eolande.AspNet.Bll.csproj">
+    <ProjectReference Include="..\Eolande.AspNet.Bll\05_Eolande.AspNet.Bll.csproj">
       <Project>{988cdc35-3770-478c-bb5b-56e3d9e87597}</Project>
-      <Name>04_Eolande.AspNet.Bll</Name>
+      <Name>05_Eolande.AspNet.Bll</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Eolande.AspNet.Domain\02_Eolande.AspNet.Domain.csproj">
+    <ProjectReference Include="..\Eolande.AspNet.Domain\03_Eolande.AspNet.Domain.csproj">
       <Project>{7a65f204-f0ec-46b7-89a7-b74e7110b97d}</Project>
-      <Name>02_Eolande.AspNet.Domain</Name>
+      <Name>03_Eolande.AspNet.Domain</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Eolande.AspNet.IBll\03_Eolande.AspNet.IBll.csproj">
+    <ProjectReference Include="..\Eolande.AspNet.IBll\04_Eolande.AspNet.IBll.csproj">
       <Project>{4e9d14de-116f-4daa-9c8b-2c52deeb58d9}</Project>
-      <Name>03_Eolande.AspNet.IBll</Name>
+      <Name>04_Eolande.AspNet.IBll</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Eolande.AspNet.Proxy\05_Eolande.AspNet..IBll.Proxy.csproj">
+    <ProjectReference Include="..\Eolande.AspNet.Proxy\06_Eolande.AspNet..IBll.Proxy.csproj">
       <Project>{7075f471-0230-43fd-aaf6-678797aac4d1}</Project>
-      <Name>05_Eolande.AspNet..IBll.Proxy</Name>
+      <Name>06_Eolande.AspNet..IBll.Proxy</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Eolande.AspNet.Web\07_Eolande.AspNet.Web.csproj">
+    <ProjectReference Include="..\Eolande.AspNet.Web\08_Eolande.AspNet.Web.csproj">
       <Project>{3419277a-f904-4a7b-bd4e-4a6650fdbd38}</Project>
-      <Name>07_Eolande.AspNet.Web</Name>
+      <Name>08_Eolande.AspNet.Web</Name>
     </ProjectReference>
     <ProjectReference Include="..\Eolande.Core\01_Eolande.Core.csproj">
       <Project>{6e80f9e8-6f98-4f2c-a4db-c5eca0640308}</Project>
